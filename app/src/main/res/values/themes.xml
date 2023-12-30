@@ -3,11 +3,6 @@
     <style name="Base.Theme.Diary" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="background">@color/Primary</item>
-        <item name="button_text">@color/White</item>
-        <item name="button_background">@color/YellowThin</item>
-        <item name="message_text">@color/YellowCalm</item>
-        <item name="message_background">@color/Secondary</item>
     </style>
 
     <style name="Theme.Diary" parent="Base.Theme.Diary" />
