@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Primary">#5BA2F4</color>
-    <color name="PrimaryDark">#034C81</color>
-    <color name="Secondary">#2CA3FA</color>
-    <color name="YellowThin">#C9BBAA</color>
-    <color name="YellowCalm">#CDB87E</color>
-    <color name="YellowBright">#FFFDD1</color>
-    <color name="Grey">#7F858C</color>
+    <color name="Primary">#393BDB</color>
+    <color name="PrimaryDark">#292C87</color>
+    <color name="Secondary">#448D76</color>
+    <color name="MessageText">#BABA80</color>
+    <color name="Green">#CBE432</color>
     <color name="White">#FFFFFF</color>
 </resources>

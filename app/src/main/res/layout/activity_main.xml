@@ -2,20 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivityLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Primary"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/postsView"
+        android:id="@+id/messgesView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/Primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/Primary"
         tools:listitem="@layout/fragment_message">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -39,9 +40,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/style_left_element_in_panel"
-            android:backgroundTint="@color/Grey"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/font_rubik"
             android:text="Button"
-            android:textColor="@color/White" />
+            android:textColor="@color/PrimaryDark" />
 
         <EditText
             android:id="@+id/textField"
@@ -50,10 +52,11 @@
             android:layout_weight="1"
             android:background="@drawable/style_center_element_in_panel"
             android:ems="10"
+            android:fontFamily="@font/font_rubik"
             android:inputType="text"
             android:text="Name"
-            android:textColor="@color/White"
-            android:textColorHint="@color/White" />
+            android:textColor="@color/PrimaryDark"
+            android:textColorHint="@color/PrimaryDark" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/sendButton"
@@ -61,8 +64,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/style_right_element_in_panel"
-            android:backgroundTint="@color/Grey"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/font_rubik"
             android:text="Button"
-            android:textColor="@color/White" />
+            android:textColor="@color/PrimaryDark" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

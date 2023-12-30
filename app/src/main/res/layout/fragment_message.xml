@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/Primary">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/style_message"
-        android:textColor="@color/YellowCalm"
+        android:textColor="@color/MessageText"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="45dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lorem lorem, gravida eget ex eget, lacinia cursus lacus. Ut rhoncus urna nunc, nec faucibus elit tincidunt ut. Sed varius mollis quam eu convallis. Nam sed feugiat justo, eget euismod lacus. Cras facilisis pulvinar pharetra. Maecenas non justo posuere, accumsan ipsum sit amet, consectetur dolor. Suspendisse dapibus nunc eget iaculis efficitur. Curabitur ligula quam, lacinia ut lorem non, tincidunt porta purus. Ut vehicula rhoncus eleifend."
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:fontFamily="@font/font_rubik" />
 </androidx.cardview.widget.CardView>
