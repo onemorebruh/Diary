@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary">#5BA2F4</color>
+    <color name="PrimaryDark">#034C81</color>
+    <color name="Secondary">#2CA3FA</color>
+    <color name="YellowThin">#C9BBAA</color>
+    <color name="YellowCalm">#CDB87E</color>
+    <color name="YellowBright">#FFFDD1</color>
+    <color name="Grey">#7F858C</color>
+    <color name="White">#FFFFFF</color>
+</resources>
