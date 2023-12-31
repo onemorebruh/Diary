@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Diary</string>
+    <string name="send_message_error">что то полшо не так при отправке сообщения</string>
+    <string name="text_field_placeholder">сообщение…</string>
+</resources>

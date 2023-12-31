@@ -8,7 +8,7 @@
         android:bottomRightRadius="0dp"
         />
     <solid
-        android:color="@color/Green"
+        android:color="@color/InteractiveElement"
         />
 
 

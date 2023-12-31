@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class MessageViewModel(application: Application): AndroidViewModel(application) {
 
-    private val messageDAO = Database.getDatabese(application)!!.MessageDAO()
+    private val messageDAO = Database.getDatabase(application).MessageDAO()
     private val repository: MessageRepository = MessageRepository(messageDAO)
     val allMessages: LiveData<List<Message>> =  repository.allMessages
 

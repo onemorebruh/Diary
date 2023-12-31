@@ -34,15 +34,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <ImageButton
             android:id="@+id/pinButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/style_left_element_in_panel"
-            android:backgroundTint="@color/Green"
-            android:fontFamily="@font/font_rubik"
-            android:text="Button"
+            android:backgroundTint="@color/InteractiveElement"
+            android:src="@drawable/image_pin_button"
             android:textColor="@color/PrimaryDark" />
 
         <EditText
@@ -53,20 +52,19 @@
             android:background="@drawable/style_center_element_in_panel"
             android:ems="10"
             android:fontFamily="@font/font_rubik"
+            android:hint="@string/text_field_placeholder"
             android:inputType="text"
-            android:text="Name"
             android:textColor="@color/PrimaryDark"
             android:textColorHint="@color/PrimaryDark" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <ImageButton
             android:id="@+id/sendButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/style_right_element_in_panel"
-            android:backgroundTint="@color/Green"
-            android:fontFamily="@font/font_rubik"
-            android:text="Button"
+            android:backgroundTint="@color/InteractiveElement"
+            android:src="@drawable/image_send_message_button"
             android:textColor="@color/PrimaryDark" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

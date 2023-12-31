@@ -4,6 +4,6 @@
     <color name="PrimaryDark">#292C87</color>
     <color name="Secondary">#448D76</color>
     <color name="MessageText">#BABA80</color>
-    <color name="Green">#CBE432</color>
+    <color name="InteractiveElement">#FFE87C</color>
     <color name="White">#FFFFFF</color>
 </resources>

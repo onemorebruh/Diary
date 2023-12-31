@@ -1,22 +1,22 @@
 package pet.onemorebruh.diary
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import pet.onemorebruh.diary.database.Message
 import pet.onemorebruh.diary.database.MessageListAdapter
 import pet.onemorebruh.diary.database.MessageViewModel
-import java.sql.Timestamp
+import java.text.SimpleDateFormat
+import java.util.Calendar
 
 class MainActivity : AppCompatActivity() {
 
-    private val textField = findViewById<EditText>(R.id.textField)
+    private lateinit var textField: EditText
     private lateinit var messageViewModel: MessageViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,24 +25,26 @@ class MainActivity : AppCompatActivity() {
 
         //init all used elements elements
         val messagesView = findViewById<RecyclerView>(R.id.messgesView)
-        val pinButton = findViewById<Button>(R.id.pinButton)
-        val sendButton = findViewById<Button>(R.id.sendButton)
+        val pinButton = findViewById<ImageButton>(R.id.pinButton)
+        val sendButton = findViewById<ImageButton>(R.id.sendButton)
+        textField = findViewById<EditText>(R.id.textField)
         messageViewModel = ViewModelProvider(this)[MessageViewModel::class.java]
         val adapter = MessageListAdapter()
 
+
         //load data from database
-        messageViewModel.allMessages.observe(this, Observer { message ->
+        messageViewModel.allMessages.observe(this) { message ->
             adapter.setData(message)
-        })
+        }
         messagesView.adapter = adapter
         messagesView.layoutManager = LinearLayoutManager(this)
 
 
         //set button actions
 
-        pinButton.setOnClickListener {
-            throw NotImplementedError()//TODO add images support
-        }
+        //pinButton.setOnClickListener {
+        //    throw NotImplementedError()//TODO add images support
+        //}
 
         sendButton.setOnClickListener {
             if (textField.text.equals("")) {//writes new record to database if text is not empty
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     private fun sendMessage(text: String): Boolean{
         try {
             //get current time
-            val timestamp = Timestamp(System.currentTimeMillis())
+            val timestamp = SimpleDateFormat("dd.MM HH:mm").format(Calendar.getInstance().time)
             //gather data to message
             val message: Message = Message(0, text, timestamp)
             //insert message to database
@@ -76,5 +78,4 @@ class MainActivity : AppCompatActivity() {
             return false
         }
     }
-
 }

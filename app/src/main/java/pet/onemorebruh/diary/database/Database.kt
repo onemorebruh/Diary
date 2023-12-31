@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database( entities = [Message::class], version = 0)
+@Database( entities = [Message::class], version = 1)
 abstract class Database: RoomDatabase() {
     abstract fun MessageDAO(): MessageDAO
 
@@ -13,17 +13,14 @@ abstract class Database: RoomDatabase() {
         @Volatile
         private var INSTANCE: pet.onemorebruh.diary.database.Database? = null
 
-        fun getDatabese(context: Context): pet.onemorebruh.diary.database.Database? {
+        fun getDatabase(context: Context): pet.onemorebruh.diary.database.Database {
             val temporaryInstance = INSTANCE
             if (temporaryInstance != null){
                 return temporaryInstance
             }
             synchronized(this){
-                val instance = Room.databaseBuilder(
-                    context,
-                    pet.onemorebruh.diary.database.Database::class.java,
-                    "database"
-                ).build()
+                val instance = Room.databaseBuilder(context.applicationContext, pet.onemorebruh.diary.database.Database::class.java, "database")
+                    .build()
                 INSTANCE = instance
                 return instance
             }
