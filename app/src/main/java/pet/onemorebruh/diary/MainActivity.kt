@@ -1,6 +1,7 @@
 package pet.onemorebruh.diary
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         //load data from database
         messageViewModel.allMessages.observe(this) { message ->
+            Log.d("DEBUG", "tired to display $message")
             adapter.setData(message)
         }
         messagesView.adapter = adapter
@@ -47,7 +49,8 @@ class MainActivity : AppCompatActivity() {
         //}
 
         sendButton.setOnClickListener {
-            if (textField.text.equals("")) {//writes new record to database if text is not empty
+            Log.d("DEBUG", "send button have been pressed")
+            if (textField.text.toString() != "") {//writes new record to database if text is not empty
                 val status = sendMessage(textField.text.toString())
                 //send error message or clean textField
                 if (!status){
@@ -67,8 +70,9 @@ class MainActivity : AppCompatActivity() {
     private fun sendMessage(text: String): Boolean{
         try {
             //get current time
-            val timestamp = SimpleDateFormat("dd.MM HH:mm").format(Calendar.getInstance().time)
+            val timestamp = SimpleDateFormat("dd.MM hh:mm").format(Calendar.getInstance().time)
             //gather data to message
+            Log.d("DEBUG", "tired to paste $text at $timestamp")
             val message: Message = Message(0, text, timestamp)
             //insert message to database
             messageViewModel.insertMessage(message)

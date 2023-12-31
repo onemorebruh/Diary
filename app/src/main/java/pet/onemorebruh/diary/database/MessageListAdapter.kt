@@ -23,7 +23,7 @@ class MessageListAdapter(): RecyclerView.Adapter<MessageListAdapter.MessageListH
     override fun onBindViewHolder(holder: MessageListHolder, position: Int) {
         //binds data with visible objects
         holder.text.text = messages[position].text
-        holder.time.text = messages[position].text
+        holder.time.text = messages[position].time
     }
 
     override fun getItemCount(): Int {

@@ -24,11 +24,11 @@ The buttons in the bottom have rounded 10dp corners only when they do not have n
 
 Database have one only scheme which contains date about messages user writes
 
-| Field name | Type      | Description                                 |
-|------------|-----------|---------------------------------------------|
-| id         | Int       | Identificator                               |
-| text       | String    | Text of message                             |
-| time       | Timestamp | Timestamp of message. It displays on screen |
+| Field name | Type   | Description                                 |
+|------------|--------|---------------------------------------------|
+| id         | Int    | Identificator (is hidden from user)         |
+| text       | String | Text of message                             |
+| time       | String | Timestamp of message. It displays on screen |
 
 
 ## TODO
@@ -41,13 +41,13 @@ Database have one only scheme which contains date about messages user writes
 - [ ] use themes
 
 [ ] Logic
-- [ ] scrollable feed on main activity
-- [ ] usable text field and post button
+- [x] scrollable feed on main activity
+- [x] usable text field and post button
 - [ ] implement image support
 
 [ ] Database
-- [ ] make app read data from database
-- [ ] make app write data to database
+- [x] make app read data from database
+- [x] make app write data to database
 - [ ] implement message hiding so user will not see it in chat
 - [ ] implement image support
 
