@@ -68,18 +68,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun sendMessage(text: String): Boolean{
-        try {
+        return try {
             //get current time
             val timestamp = SimpleDateFormat("dd.MM hh:mm").format(Calendar.getInstance().time)
             //gather data to message
             Log.d("DEBUG", "tired to paste $text at $timestamp")
-            val message: Message = Message(0, text, timestamp)
+            val message: Message = Message(0, text, timestamp, null)
             //insert message to database
             messageViewModel.insertMessage(message)
-            return true
-        }
-        catch (exception: Exception) {//here have to be one of Room's Exceptions but i haven't found correct one yet
-            return false
+            true
+        } catch (exception: Exception) {//here have to be one of Room's Exceptions but i haven't found correct one yet
+            false
         }
     }
 }

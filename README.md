@@ -37,7 +37,7 @@ Database have one only scheme which contains date about messages user writes
 - [x] choose color schemes
 - [x] design blocks and their decorations
 - [ ] rewrite styles from components to styles so i will add styles to components by one line of xml
-- [ ] set text align in messages
+- [ ] fix messages in the end so all of them would be visible
 - [ ] use themes
 
 [ ] Logic
@@ -50,6 +50,7 @@ Database have one only scheme which contains date about messages user writes
 - [x] make app write data to database
 - [ ] implement message hiding so user will not see it in chat
 - [ ] implement image support
+- [ ] do not break old records while migration
 
 [ ] Tests
 - [] test...
